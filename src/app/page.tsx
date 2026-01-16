@@ -9,6 +9,7 @@ import TrendingCoins from "@/components/home/trending-coins";
 import { Suspense } from "react";
 
 export default async function page() {
+  
   return (
     <main className="main-container">
       <section className="home-grid">
