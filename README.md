@@ -1,17 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Coin Pulse - Cryptocurrency Screener
 
-## Getting Started
+**Coin Pulse** is a comprehensive cryptocurrency screening and analysis tool built with Next.js. It provides real-time market data, trend analysis, and filtering capabilities to help users make informed decisions in the crypto market.
 
-First, run the development server:
+## 🚀 Features
+
+- **Real-Time Data:** Live tracking of cryptocurrency prices, market cap, and volume.
+- **Advanced Screening:** Filter coins based on performance, sector, and custom metrics.
+- **Interactive Charts:** Visual representations of price history and market trends.
+- **Responsive Design:** Optimized experience across desktop, tablet, and mobile devices.
+- **Performance:** Built on Next.js for fast server-side rendering and static generation.
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS (Recommended) / CSS Modules
+- **Deployment:** Vercel
+
+## 📦 Getting Started
+
+Follow these steps to get the project up and running on your local machine.
+
+### Prerequisites
+
+- Node.js (LTS version recommended)
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/gift56/coinscreener.git
+   cd coinscreener
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Run the development server:**
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
