@@ -1,13 +1,15 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
 import SearchModal from "@/components/search-modal";
+import NavLinks from "@/components/nav-links";
+import { fetcher } from "@/lib/actions/coingecko.actions";
 
-const Header = () => {
-  const pathname = usePathname();
+const Header = async () => {
+  const trendingCoins = await fetcher<{ coins: TrendingCoin[] }>(
+    "/search/trending",
+    undefined,
+    300,
+  );
 
   return (
     <header>
@@ -17,16 +19,8 @@ const Header = () => {
         </Link>
 
         <nav>
-          <SearchModal />
-
-          <Link
-            href="/coins"
-            className={cn("nav-link", {
-              "is-active": pathname === "/coins",
-            })}
-          >
-            All Coins
-          </Link>
+          <SearchModal trendingCoins={trendingCoins.coins.slice(0, 6)} />
+          <NavLinks />
         </nav>
       </div>
     </header>
